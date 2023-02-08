@@ -1,7 +1,7 @@
 [package]
-name = "yew-webapp-ngs"
+name = "yew-webapp"
 version = "0.1.0"
-edition = "2023"
+edition = "2021"
 description = "yew-webapp"
 readme = "README.md"
 repository = "https://github.com/NGsHjodra/yew-webapp"
@@ -12,3 +12,25 @@ categories = ["gui", "wasm", "web-programming"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
 yew = { version="0.20", features=["csr"] }
+gloo = "0.8.0"
+gloo-utils = "0.1"
+wasm-bindgen-futures = "0.4.30"
+rand = "0.8.4"
+getrandom = { version = "0.2", features = ["js"] }
+js-sys = "0.3.61"
+wasm-bindgen = "0.2.84"
+
+[dependencies.web-sys]
+version = "0.3.58"
+features = [
+    "Navigator",
+    "Request",
+    "RequestInit",
+    "RequestMode",
+    "Response",
+    "Window",
+    "CanvasRenderingContext2d",
+    "HtmlCanvasElement",
+    "ImageData",
+    "ImageBitmap"
+]
